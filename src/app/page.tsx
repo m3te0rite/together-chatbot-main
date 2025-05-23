@@ -110,7 +110,7 @@ export default function Chat() {
                 >
                   Together AI
                 </Link>{" "}
-                that breakes down complex geographic concepts into clear, bite-sized explanations. From urbanization to cultural patterns, let's make geography click together.
+                that breakes down complex geographic concepts into clear, bite-sized explanations. From urbanization to cultural patterns, let us make geography click together.
 
               </p>
             </div>
