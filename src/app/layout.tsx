@@ -16,8 +16,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Together AI Solutions",
-  description: "A Chatbot to answer your Together AI questions",
+  title: "Study Genius",
+  description: "A Chatbot to answer all your study related queries",
 };
 
 export default function RootLayout({

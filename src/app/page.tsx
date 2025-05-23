@@ -21,20 +21,20 @@ export default function Chat() {
 
   const suggestions = [
     {
-      title: "How can I build an app that parses PDFs",
-      subtitle: "and can extract key things from them?",
+      title: "How do push and pull factors influence international migration patterns",
+      subtitle: "and what examples can we see in today's world?",
     },
     {
-      title: "I want to build a voice agent",
-      subtitle: "that my customers can call for support",
+      title: "Can you explain how the demographic transition model applies",
+      subtitle: "to developing countries versus developed countries?",
     },
     {
-      title: "How do I build a workflow that can summarize",
-      subtitle: "my emails and send me a daily digest?",
+      title: "What role do supranational organizations like the EU",
+      subtitle: "play in changing traditional concepts of political boundaries and sovereignty?",
     },
     {
-      title: "How do I build an open source Perplexity",
-      subtitle: "clone with a search API?",
+      title: "How do cultural diffusion and globalization affect ",
+      subtitle: "local folk cultures and indigenous practices?",
     },
   ];
 
@@ -102,7 +102,7 @@ export default function Chat() {
                 <ChatBubbleBottomCenterTextIcon className="h-8 w-8" />
               </p>
               <p>
-                This is a chatbot by{" "}
+                This is a chatbot using API calls to {" "}
                 <Link
                   className="font-medium underline underline-offset-4"
                   href="https://together.ai"
@@ -110,20 +110,7 @@ export default function Chat() {
                 >
                   Together AI
                 </Link>{" "}
-                that can guide you through how to solve problems with Together
-                AI, from general architecture and what APIs you should use down
-                to which LLM you should use for a specific use case.
-              </p>
-              <p>
-                You can learn more about the Together AI by visiting our{" "}
-                <Link
-                  className="font-medium underline underline-offset-4"
-                  href="https://docs.together.ai/"
-                  target="_blank"
-                >
-                  docs
-                </Link>
-                .
+                that breakes down complex geographic concepts into clear, bite-sized explanations. From urbanization to cultural patterns, let's make geography click together.
               </p>
             </div>
           </motion.div>
@@ -173,7 +160,7 @@ export default function Chat() {
             <textarea
               rows={4}
               autoFocus
-              placeholder="I want to build a..."
+              placeholder="Tell me about ..."
               required
               value={prompt}
               onChange={(e) => setPrompt(e.target.value)}
