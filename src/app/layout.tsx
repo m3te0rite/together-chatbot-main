@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import { GitHubLogoIcon } from "@radix-ui/react-icons";
-import TogetherLogo from "./TogetherLogo";
+import Footer from './dynamic-components/Footer';
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -30,28 +29,17 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} flex min-h-full flex-col antialiased`}
       >
-        <header className="text-sm font-medium">
-          <div className="mx-auto flex max-w-6xl gap-4 px-4 py-4">
-            <a
-              href="/"
-              className="flex gap-2 text-gray-500 hover:text-gray-900"
-            >
-              <TogetherLogo width="20" height="20" />
-              Together AI Solutions
+        <header className="text-lg font-medium">
+          <div className="mx-auto flex max-w-6xl gap-4 px-4 py-4 justify-center">
+            <a href="/" className="flex gap-2 text-gray-500 hover:text-gray-900">
+              Study-Genius
             </a>
-
-            <div className="ml-auto">
-              <a
-                href="https://github.com/nutlope/together-chatbot"
-                className="text-gray-500 hover:text-gray-900"
-              >
-                <GitHubLogoIcon width="20" height="20" />
-              </a>
-            </div>
           </div>
         </header>
 
         <main className="flex grow flex-col">{children}</main>
+
+        <Footer />
       </body>
     </html>
   );
