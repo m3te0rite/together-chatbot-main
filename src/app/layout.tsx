@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Footer from './dynamic-components/Footer';
+import Header from './dynamic-components/Header';
+
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -26,20 +28,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-full">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} flex min-h-full flex-col antialiased`}
-      >
-        <header className="text-lg font-medium">
-          <div className="mx-auto flex max-w-6xl gap-4 px-4 py-4 justify-center">
-            <a href="/" className="flex gap-2 text-gray-500 hover:text-gray-900">
-              Study-Genius
-            </a>
-          </div>
-        </header>
+      <body className={`${geistSans.variable} ${geistMono.variable} flex min-h-full flex-col antialiased`}>
 
+        <Header/>
         <main className="flex grow flex-col">{children}</main>
+        <br></br>
 
-        <Footer />
+        <Footer/>
       </body>
     </html>
   );

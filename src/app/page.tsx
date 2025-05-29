@@ -11,6 +11,7 @@ import {
 } from "@heroicons/react/24/solid";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { Scale } from "lucide-react";
 
 export default function Chat() {
   const [prompt, setPrompt] = useState("");
@@ -85,17 +86,17 @@ export default function Chat() {
 
   return (
     <>
-      <div className="flex h-0 grow flex-col overflow-y-scroll">
+      <div className="flex grow flex-col overflow-y-auto">
         {messages.length === 0 && (
           <motion.div
             key="overview"
-            className="mx-auto max-w-3xl md:mt-20"
+            className="mx-auto w-full max-w-3xl md:mt-5"            
             initial={{ opacity: 0, scale: 0.98 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.98 }}
             transition={{ delay: 0.5 }}
           >
-            <div className="flex max-w-xl flex-col gap-8 rounded-xl p-6 text-center leading-relaxed">
+            <div className="mx-auto flex max-w-xl flex-col gap-8 rounded-xl p-6 text-center leading-relaxed">
               <p className="flex flex-row items-center justify-center gap-4">
                 <CommandLineIcon className="h-8 w-8" />
                 <span>+</span>
@@ -110,12 +111,20 @@ export default function Chat() {
                 >
                   Together AI
                 </Link>{" "}
-                that breakes down complex geographic concepts into clear, bite-sized explanations. From urbanization to cultural patterns, let us make geography click together.
-
+                that breaks down complex geographic concepts into clear, bite-sized explanations. From urbanization to cultural patterns, let us make geography click together.
               </p>
             </div>
+
+
+
+
+
+
+
+
           </motion.div>
         )}
+        
         <div className="space-y-4 py-8">
           {messages.map((message, i) => (
             <div key={i} className="mx-auto flex max-w-3xl">
