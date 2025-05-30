@@ -1,7 +1,5 @@
 'use client';
 
-import Link from 'next/link';
-
 const Header = () => {
   return (
     <header className="text-lg font-medium">

@@ -11,7 +11,7 @@ import {
 } from "@heroicons/react/24/solid";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Scale } from "lucide-react";
+// import { Scale } from "lucide-react";
 
 export default function Chat() {
   const [prompt, setPrompt] = useState("");
