@@ -112,7 +112,7 @@ export default function ChatPage() {
         {messages.length === 0 && (
           <motion.div
             key="overview"
-            className="mx-auto w-full max-w-3xl md:mt-5"
+            className="mx-auto w-full max-w-3xl"
             initial={{ opacity: 0, scale: 0.98 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.98 }}
@@ -140,6 +140,7 @@ export default function ChatPage() {
           </motion.div>
         )}
 
+
         <div className="space-y-4 py-8">
           {messages.map((message, i) => (
             <div key={i} className="mx-auto flex max-w-3xl">
@@ -163,6 +164,11 @@ export default function ChatPage() {
           )} 
         </div>
       </div>
+
+
+
+
+
 
       <div className="mx-auto mb-8 hidden w-full max-w-3xl grid-cols-2 gap-4 md:grid">
         {messages.length === 0 &&
@@ -193,13 +199,12 @@ export default function ChatPage() {
             setMessages([]);
             localStorage.removeItem("chat-history");
           }}
-          className="rounded bg-red-500 px-4 py-2 text-white hover:bg-red-600"
-        >
+          className="rounded bg-red-500 px-4 py-2 text-white hover:bg-red-600 p-1">
           Clear Chat History
         </button>
       </div>
 
-      <div className="mb-8 flex justify-center gap-2">
+      <div className="mb-8 flex justify-center gap-2 p-4">
         <form onSubmit={handleSubmit} className="flex w-full max-w-3xl">
           <fieldset className="relative flex w-full">
             <textarea
